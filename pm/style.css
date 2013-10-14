@@ -1,0 +1,360 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+/* End Styling Reset */
+
+/* Disable mouse selection */
+/*html{ 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}*/
+
+/* Generic pane rules */
+body {margin: 0; -webkit-text-size-adjust: 100%;}
+.page {left: 0; right: 0; top: 0; bottom: 0;}
+.row, .col, .page {overflow: hidden; position: absolute;}
+.row {left: 0; right: 0;}
+.col {top: 0; bottom: 0;}
+.scroll-x {overflow-x: auto; -webkit-overflow-scrolling: touch;}
+.scroll-y {overflow-y: auto; -webkit-overflow-scrolling: touch;}
+
+/* Pane configuration */
+.left.col {width: 250px;}
+.right.col {left: 250px; right: 0;}
+.header.row {height: 50px; line-height: 50px;}
+.body.row {top: 50px; bottom: 0;}
+
+/* Generic rules */
+.centre {margin: 0; padding: 0; text-align: center;}
+.alignleft {float: left;}
+.alignright {float: right;}
+
+/* Styling */
+body {font-family: 'Helvetica Neue', Arial, Sans-Serif;}
+.body, .pane {border-top: solid 1px black;}
+.left.col {background: #666;}
+.right.col {
+    background: #ddd;
+    border-left: 1px solid black;
+    box-shadow: inset 4px 54px 10px #4c4c4c;
+    -webkit-box-shadow: inset 4px 54px 10px #4c4c4c;
+    -moz-box-shadow: inset 4px 54px 10px #4c4c4c;
+    background: linear-gradient(bottom, rgb(186,186,186) 100%, rgb(242,242,242) 0%); 
+    background: -o-linear-gradient(bottom, rgb(186,186,186) 100%, rgb(242,242,242) 0%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 14%, bottom #000000 75%);
+    background: -webkit-linear-gradient(bottom, rgb(186,186,186) 100%, rgb(242,242,242) 0%);
+    background: -ms-linear-gradient(bottom, rgb(186,186,186) 100%, rgb(242,242,242) 0%);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(1, rgb(186,186,186)),color-stop(0, rgb(242,242,242)));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BABABA', endColorstr='#F2F2F2');
+    }
+#stripes {background: url('images/stripe.png');}
+.right.col .body {padding: 0 1em 1em 1em;}
+.listview {padding: 0; margin: 0;}
+.header.row.right {background-color: #999; text-align: center;}
+.header.row.left {background-color: #666;}
+
+/* Sidebar */
+#sidebar li {display:block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#sidebar li ul li {display:none;}
+
+.project{ 
+    display: block;
+    width: 100%; 
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    box-shadow: inset 0 1px 0 #777;
+    -webkit-box-shadow: inset 0 1px 0 #777;
+    -moz-box-shadow: inset 0 1px 0 #777;
+    background: linear-gradient(27, rgb(70,70,70) 3%, rgb(100,100,100) 100%);
+    background: -o-linear-gradient(27, rgb(70,70,70) 3%, rgb(100,100,100) 100%);
+    background: -moz-linear-gradient(27, rgb(70,70,70) 3%, rgb(100,100,100) 100%);
+    background: -webkit-linear-gradient(27, rgb(70,70,70) 3%, rgb(100,100,100) 100%);
+    background: -ms-linear-gradient(27, rgb(70,70,70) 3%, rgb(100,100,100) 100%);
+    background: -webkit-gradient(linear,left 27,left top,color-stop(0.03, rgb(70,70,70)),color-stop(1, rgb(100,100,100)));
+}
+.project:hover{
+    box-shadow: inset 0 1px 0 #999;
+    -webkit-box-shadow: inset 0 1px 0 #999;
+    -moz-box-shadow: inset 0 1px 0 #999;
+    background: linear-gradient(27, rgb(70,70,70) 3%, rgb(132,132,132) 100%);
+    background: -o-linear-gradient(27, rgb(70,70,70) 3%, rgb(132,132,132) 100%);
+    background: -moz-linear-gradient(27, rgb(70,70,70) 3%, rgb(132,132,132) 100%);
+    background: -webkit-linear-gradient(27, rgb(70,70,70) 3%, rgb(132,132,132) 100%);
+    background: -ms-linear-gradient(27, rgb(70,70,70) 3%, rgb(132,132,132) 100%);
+    background: -webkit-gradient(linear,left 27,left top,color-stop(0.03, rgb(70,70,70)),color-stop(1, rgb(132,132,132)));
+}
+.projectText {color: #000; padding: 5px 0 5px 10px; pointer-events:none;}
+
+.task {
+    display: block;
+    width: 100%;
+    height: 13px;
+    cursor:default;
+    padding: 3px 3px 3px 10px;
+    font-weight: normal;
+    font-size: 0.8em;
+    border-top: 1px solid #333;
+    box-shadow: inset 0 1px 0 #FFF;
+    -webkit-box-shadow: inset 0 1px 0 #FFF;
+    -moz-box-shadow: inset 0 1px 0 #FFF;
+    background: linear-gradient(19, rgb(196,196,196) 0%, rgb(218,218,218) 100%);
+    background: -o-linear-gradient(19, rgb(196,196,196) 0%, rgb(218,218,218) 100%);
+    background: -moz-linear-gradient(19, rgb(196,196,196) 0%, rgb(218,218,218) 100%);
+    background: -webkit-linear-gradient(19, rgb(196,196,196) 0%, rgb(218,218,218) 100%);
+    background: -ms-linear-gradient(19, rgb(196,196,196) 0%, rgb(218,218,218) 100%);
+    background: -webkit-gradient(linear,left 19,left top,color-stop(0, rgb(196,196,196)),color-stop(1, rgb(218,218,218)));
+}
+.task:hover {
+    background: linear-gradient(19, rgb(196,196,196) 0%, rgb(233,233,233) 100%);
+    background: -o-linear-gradient(19, rgb(196,196,196) 0%, rgb(233,233,233) 100%);
+    background: -moz-linear-gradient(19, rgb(196,196,196) 0%, rgb(233,233,233) 100%);
+    background: -webkit-linear-gradient(19, rgb(196,196,196) 0%, rgb(233,233,233) 100%);
+    background: -ms-linear-gradient(19, rgb(196,196,196) 0%, rgb(233,233,233) 100%);
+    background: -webkit-gradient(linear,left 19,left top,color-stop(0, rgb(196,196,196)),color-stop(1, rgb(233,233,233)));
+}
+
+.addTask {
+    display: block;
+    width: 100%;
+    height: 13px;
+    cursor:default;
+    padding: 3px 3px 3px 10px;
+    font-weight: normal;
+    font-size: 11px;
+    border-top: 1px solid #333;
+    box-shadow: inset 0 1px 0 #B5C72D;
+    -webkit-box-shadow: inset 0 1px 0 #B5C72D;
+    -moz-box-shadow: inset 0 1px 0 #B5C72D;
+    background: linear-gradient(19, rgb(159,175,39) 0%, rgb(177,195,44) 100%);
+    background: -o-linear-gradient(19, rgb(159,175,39) 0%, rgb(177,195,44) 100%);
+    background: -moz-linear-gradient(19, rgb(159,175,39) 0%, rgb(177,195,44) 100%);
+    background: -webkit-linear-gradient(19, rgb(159,175,39) 0%, rgb(177,195,44) 100%);
+    background: -ms-linear-gradient(19, rgb(159,175,39) 0%, rgb(177,195,44) 100%);
+    background: -webkit-gradient(linear,left 19,left top,color-stop(0, rgb(159,175,39)),color-stop(1, rgb(177,195,44)));
+}
+.addTask:hover {
+    box-shadow: inset 0 1px 0 #BDD033;
+    -webkit-box-shadow: inset 0 1px 0 #BDD033;
+    -moz-box-shadow: inset 0 1px 0 #BDD033;
+    background: linear-gradient(19, rgb(164,180,40) 0%, rgb(187,208,48) 100%);
+    background: -o-linear-gradient(19, rgb(164,180,40) 0%, rgb(187,208,48) 100%);
+    background: -moz-linear-gradient(19, rgb(164,180,40) 0%, rgb(187,208,48) 100%);
+    background: -webkit-linear-gradient(19, rgb(164,180,40) 0%, rgb(187,208,48) 100%);
+    background: -ms-linear-gradient(19, rgb(164,180,40) 0%, rgb(187,208,48) 100%);
+    background: -webkit-gradient(linear,left 19,left top,color-stop(0, rgb(164,180,40)),color-stop(1, rgb(187,208,48)));
+}
+.addTask p {pointer-events:none;}
+
+.addProject{
+    display: block;
+    width: 100%;
+    height: 27px;
+    border-bottom: 1px solid #000;
+    box-shadow: inset 0 1px 0 #8AAE37;
+    -webkit-box-shadow: inset 0 1px 0 #8AAE37;
+    -moz-box-shadow: inset 0 1px 0 #8AAE37;
+    background: linear-gradient(19, rgb(84,106,33) 0%, rgb(121,152,48) 100%);
+    background: -o-linear-gradient(19, rgb(84,106,33) 0%, rgb(121,152,48) 100%);
+    background: -moz-linear-gradient(19, rgb(84,106,33) 0%, rgb(121,152,48) 100%);
+    background: -webkit-linear-gradient(19, rgb(84,106,33) 0%, rgb(121,152,48) 100%);
+    background: -ms-linear-gradient(19, rgb(84,106,33) 0%, rgb(121,152,48) 100%);
+    background: -webkit-gradient(linear,left 19,left top,color-stop(0, rgb(84,106,33)),color-stop(1, rgb(121,152,48)));
+}
+.addProject:hover{
+    box-shadow: inset 0 1px 0 #A5C954;
+    -webkit-box-shadow: inset 0 1px 0 #A5C954;
+    -moz-box-shadow: inset 0 1px 0 #A5C954;
+    background: linear-gradient(19, rgb(113,142,45) 0%, rgb(145,182,57) 100%);
+    background: -o-linear-gradient(19, rgb(113,142,45) 0%, rgb(145,182,57) 100%);
+    background: -moz-linear-gradient(19, rgb(113,142,45) 0%, rgb(145,182,57) 100%);
+    background: -webkit-linear-gradient(19, rgb(113,142,45) 0%, rgb(145,182,57) 100%);
+    background: -ms-linear-gradient(19, rgb(113,142,45) 0%, rgb(145,182,57) 100%);
+    background: -webkit-gradient(linear,left 19,left top,color-stop(0, rgb(113,142,45)),color-stop(1, rgb(145,182,57)));
+}
+.addProject p {color: #000; padding: 7px 0 5px 10px; pointer-events:none;}
+
+.arrow {
+    position: absolute;
+	width: 0; 
+	height: 0; 
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent; 
+	border-right: 8px solid #222;
+    right: 30px;
+    margin-top: 5px;
+    -webkit-transform: rotate(0);
+    pointer-events:none;
+}
+
+.projectOptionsIcon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url('images/options.png') no-repeat;
+    right: 5px;
+    margin-top: 5px;
+    opacity: 0.6;
+}
+.projectOptionsIcon:hover {opacity: 1; cursor:pointer;}
+
+.projectOptions {
+    position:absolute;
+    width:100%;
+    border-bottom: 1px solid black;
+    right: 0; 
+    height: 26px;
+    display: none;
+    -webkit-box-shadow: inset 0 1px 0 #B03A37;
+    background: linear-gradient(27, rgb(106,34,33) 0%, rgb(152,50,48) 100%);
+    background: -o-linear-gradient(27, rgb(106,34,33) 0%, rgb(152,50,48) 100%);
+    background: -moz-linear-gradient(27, rgb(106,34,33) 0%, rgb(152,50,48) 100%);
+    background: -webkit-linear-gradient(27, rgb(106,34,33) 0%, rgb(152,50,48) 100%);
+    background: -ms-linear-gradient(27, rgb(106,34,33) 0%, rgb(152,50,48) 100%);
+    background: -webkit-gradient(linear,left 27,left top,color-stop(0, rgb(106,34,33)),color-stop(1, rgb(152,50,48)));
+}
+.projectOptions img {padding: 5px;}
+
+.addProjectText {
+    cursor:default;
+    width: 80%;
+    height: 18px;
+    padding: 5px 7px 5px 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-weight:bold;
+    font-size: 1em;
+}
+
+.addTaskText {
+    cursor:default;
+    margin-top: -3px;
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-weight:bold;
+}
+
+.calendar {
+    position: absolute;
+    right: 3px;
+    margin-top: -1px;
+    display: none;
+}
+
+.date {
+    width: 13px;
+    position: absolute;
+    right: 5px;
+    margin-top: 3px;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.taskFrame {
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 0 2px 7px #555;
+    margin-top: 15px;
+}
+
+.projectFrame {
+    background-color: #bbb;
+    padding: 1em;
+    box-shadow: 0 2px 7px #555;
+    margin-top: 15px;
+}
+
+.loginInfo{
+    float: right;
+    margin-right: 50px;
+}
+
+.dashedLine {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    border-top: 1px dashed #ccc;
+}
+
+div.container {
+	overflow: hidden;
+	width: 98%;
+    margin-left: 1%;
+}
+
+#contentText {
+    min-width: 99%;
+    max-width: 99%;
+    font-size: 13px;
+    border: none;
+    font-family: verdana;
+    overflow: ;
+}
+
+#contentText:focus {
+    outline: none;
+}
+
+.pText{
+    width: 70%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    border-left: 1px solid #aaa;
+    padding-left: 10px;
+}
+
+.deleteTask {
+    cursor:pointer;
+    margin-right: 33px;
+    margin-top: -1px;
+    float: right;
+}
+
+.deleteProject {
+    cursor:pointer;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 8px;
+}
+
+.completedTask {
+    margin-right: 3px;
+    margin-top: -1px;
+    float: right;
+}
